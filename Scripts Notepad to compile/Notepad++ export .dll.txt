@@ -1,0 +1,7 @@
+NPP_SAVE
+cd "$(CURRENT_DIRECTORY)"
+set compiler=gcc
+set home=$(CURRENT_DIRECTORY)
+set source_file=$(FILE_NAME)
+set output_file=$(home)\bin\$(NAME_PART).dll
+"$(compiler)" -shared -o "$(output_file)" "$(source_file)"

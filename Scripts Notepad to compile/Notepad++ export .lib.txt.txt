@@ -1,0 +1,8 @@
+NPP_SAVE
+cd "$(CURRENT_DIRECTORY)"
+set compiler=gcc
+set home=$(CURRENT_DIRECTORY)
+set source_file=$(FILE_NAME)
+set output_file=$(home)\bin\$(NAME_PART).lib
+"$(compiler)" -c "$(source_file)"
+ar rcs "$(output_file)" "$(NAME_PART).obj"
