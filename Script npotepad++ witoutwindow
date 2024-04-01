@@ -1,0 +1,8 @@
+NPP_SAVE
+cd "$(CURRENT_DIRECTORY)"
+set compiler=gcc
+set home=$(CURRENT_DIRECTORY)
+set source_file=$(FILE_NAME)
+set output_file=$(home)\bin\$(NAME_PART).exe
+set sfml =$(CURRENT_DIRECTORY)\SFML-2.6.1\include
+"$(compiler)" -mwindows -I"$(sfml)" "$(source_file)" -o "$(output_file)"
